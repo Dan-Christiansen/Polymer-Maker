@@ -5,10 +5,6 @@
 ### Feb. 17th, 2021
 ###
 ### Intended to be run on HTCONDOR
-###
-### TODO:
-### - Take a day off and enjoy the frigid weather
-### - Find a good naming convention for output .tgz
 #############################################################################
 import os, sys, tarfile, shutil
 from collections import Counter as cnt
@@ -37,7 +33,7 @@ if __name__ == "__main__":
 	# Prep the machine to use Gromacs
 	oss('export PATH=$PATH:/usr/local/openmpi/bin')
 	oss('export OMP_NUM_THREADS=4')
-	
+
 	# Ion types must match ions.itp 'molname' format in oplsaa.ff folder
 	catType = sys.argv[1] # Cation type submitted as a string
 	anType = sys.argv[2] # Anion type submitted as a string
